@@ -7,7 +7,7 @@
 // @match       *://*.musicbrainz.org/event/create
 // @match       *://*.mbsandbox.org/event/*/edit
 // @match       *://*.mbsandbox.org/event/create
-// @version     2017-09-10
+// @version     2017-09-10.2
 // @grant       none
 // ==/UserScript==
 
