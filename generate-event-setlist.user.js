@@ -55,7 +55,8 @@ function generateEventList() {
 
                 let performance = {}
 
-                performance.artist = _.unescape($(this).find("bdi")[0].innerHTML)
+                // _.unescape to replace &amp; with & (etc), and replacing square brackets with html entities to prevent the link from breaking (Rebel[ut]ion, I'm looking at you)
+                performance.artist = _.unescape($(this).find("bdi")[0].innerHTML).replace("[", "&#91;").replace("]", "&#93;")
                 let artistLink = $(this).find("a")[0].href
                 performance.artistMBID = artistLink.split("/").splice(-1)[0]
 
