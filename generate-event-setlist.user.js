@@ -7,6 +7,8 @@
 // @match       *://*.musicbrainz.org/event/create
 // @match       *://*.mbsandbox.org/event/*/edit
 // @match       *://*.mbsandbox.org/event/create
+// @downloadURL https://github.com/Kebabpizza/musicbrainz-userscripts/raw/master/generate-event-setlist.user.js
+// @updateURL   https://github.com/Kebabpizza/musicbrainz-userscripts/raw/master/generate-event-setlist.user.js
 // @version     2017-09-10.2
 // @grant       none
 // ==/UserScript==
