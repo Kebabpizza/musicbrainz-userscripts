@@ -1,11 +1,13 @@
 // ==UserScript==
-// @name        Generate event setlist
+// @name        MusicBrainz: Generate event setlist
+// @author      Kebabpizza
 // @namespace   Kebabpizza
+// @description musicbrainz.org: Generate event setlist from relationships
 // @match       *://*.musicbrainz.org/event/*/edit
 // @match       *://*.musicbrainz.org/event/create
 // @match       *://*.mbsandbox.org/event/*/edit
 // @match       *://*.mbsandbox.org/event/create
-// @version     1
+// @version     2017-09-10
 // @grant       none
 // ==/UserScript==
 
