@@ -9,7 +9,7 @@
 // @match       *://*.mbsandbox.org/event/create
 // @downloadURL https://github.com/Kebabpizza/musicbrainz-userscripts/raw/master/generate-event-setlist.user.js
 // @updateURL   https://github.com/Kebabpizza/musicbrainz-userscripts/raw/master/generate-event-setlist.user.js
-// @version     2017-09-10.2
+// @version     2017-09-16
 // @grant       none
 // ==/UserScript==
 
@@ -64,9 +64,9 @@ function generateEventList() {
 
                 let text = $(this)[0].innerHTML
                 let pattern = /time: (.*)\</gi
-                let time = pattern.exec(text)[1]
+                let time = pattern.exec(text)
 
-                performance.time = time.replace("-", " – ")
+                performance.time = time ? time[1].replace("-", " – ") : ""
 
                 performances.push(performance)
             })
@@ -105,7 +105,10 @@ function generateEventList() {
     }
 
     for (let performance of performances) {
-        let output = "@" + " " + performance.time + " [" + performance.artistMBID + "|" + performance.artist + "]\n"
+        let output = performance.time
+            ? "@" + " " + performance.time + " [" + performance.artistMBID + "|" + performance.artist + "]\n"
+            : "@ [" + performance.artistMBID + "|" + performance.artist + "]\n"
+
         textarea.value = textarea.value + output
     }
 
